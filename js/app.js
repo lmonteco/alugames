@@ -1,8 +1,14 @@
 function alterarStatus(n) {
-    let gameN = document.getElementById(`altera-${n}`);
+    let botao = document.getElementById(`botao-${n}`);
+    let imagem = document.getElementById(`imagem-${n}`);
 
-    if (gameN.innerHTML = 'Devolver') {
-        gameN.classList.toggle('dashboard__item__button--return');
-        gameN.innerHTML = 'Alugar';
+    if (botao.innerHTML == 'Devolver') {
+        botao.innerHTML = 'Alugar';
+        botao.classList.toggle('dashboard__item__button--return');
+        imagem.classList.toggle('dashboard__item__img--rented');
+    } else {
+        botao.innerHTML = 'Devolver';
+        botao.classList.toggle('dashboard__item__button--return');
+        imagem.classList.toggle('dashboard__item__img--rented');
     }
 }
