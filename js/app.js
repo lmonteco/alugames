@@ -1,3 +1,5 @@
+event.preventDefault();
+
 function alterarStatus(id) {
     let jogo = document.getElementById(`game-${id}`);
     let jogoImagem = jogo.querySelector('.dashboard__item__img');
