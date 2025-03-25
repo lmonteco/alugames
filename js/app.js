@@ -1,14 +1,16 @@
-function alterarStatus(n) {
-    let botao = document.getElementById(`botao-${n}`);
-    let imagem = document.getElementById(`imagem-${n}`);
+function alterarStatus(id) {
+    let jogo = document.getElementById(`game-${id}`);
+    let jogoImagem = jogo.querySelector('.dashboard__item__img');
+    let jogoBotao = jogo.querySelector('.dashboard__item__button');
+    let jogoNome = jogo.querySelector('.dashboard__item__name');
 
-    if (botao.innerHTML == 'Devolver') {
-        botao.innerHTML = 'Alugar';
-        botao.classList.toggle('dashboard__item__button--return');
-        imagem.classList.toggle('dashboard__item__img--rented');
+    if (jogoBotao.innerHTML == 'Devolver') {
+        jogoBotao.innerHTML = 'Alugar'; //altera o texto
+        jogoBotao.classList.toggle('dashboard__item__button--return');//altera status do botao
+        jogoImagem.classList.toggle('dashboard__item__img--rented');//altera status imagem
     } else {
-        botao.innerHTML = 'Devolver';
-        botao.classList.toggle('dashboard__item__button--return');
-        imagem.classList.toggle('dashboard__item__img--rented');
+        jogoBotao.innerHTML = 'Devolver';
+        jogoBotao.classList.toggle('dashboard__item__button--return');
+        jogoImagem.classList.toggle('dashboard__item__img--rented');
     }
 }
