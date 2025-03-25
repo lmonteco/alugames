@@ -6,13 +6,17 @@ function alterarStatus(id) {
     let jogoBotao = jogo.querySelector('.dashboard__item__button');
     let jogoNome = jogo.querySelector('.dashboard__item__name');
 
-    if (jogoBotao.innerHTML == 'Devolver') {
-        jogoBotao.innerHTML = 'Alugar'; //altera o texto
-        jogoBotao.classList.toggle('dashboard__item__button--return');//altera status do botao
-        jogoImagem.classList.toggle('dashboard__item__img--rented');//altera status imagem
-    } else {
+    if (jogoBotao.innerHTML == 'Devolver') { //devolve o jogo
+        jogoBotao.innerHTML = 'Alugar';
+        jogoBotao.classList.toggle('dashboard__item__button--return');
+        jogoImagem.classList.toggle('dashboard__item__img--rented');
+
+        alert(`${jogoNome.innerHTML} foi devolvido com sucesso. Aproveite para alugar outros!`)
+    } else { //aluga o jogo
         jogoBotao.innerHTML = 'Devolver';
         jogoBotao.classList.toggle('dashboard__item__button--return');
         jogoImagem.classList.toggle('dashboard__item__img--rented');
+        
+        alert(`${jogoNome.innerHTML} foi alugado com sucesso. Divirta-se`)
     }
 }
