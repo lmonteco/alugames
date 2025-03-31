@@ -31,3 +31,8 @@ function alterarStatus(event, id) {
     }
     console.log(contagemAlugados);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    jogosAlugados = document.querySelectorAll('.dashboard__item__img--rented').length;
+    console.log(contagemAlugados);;
+});
