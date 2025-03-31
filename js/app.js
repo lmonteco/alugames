@@ -2,7 +2,7 @@ let contagemAlugados = 1;
 
 console.log(contagemAlugados);
 
-function alterarStatus(id) {
+function alterarStatus(event, id) {
     event.preventDefault();
 
     let jogo = document.getElementById(`game-${id}`);
@@ -33,6 +33,5 @@ function alterarStatus(id) {
         
         alert(`${jogoNome} foi alugado com sucesso. Divirta-se`);
     }
-
     console.log(contagemAlugados);
 }
