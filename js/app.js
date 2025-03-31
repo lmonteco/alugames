@@ -10,7 +10,7 @@ function alterarStatus(event, id) {
     let jogoBotao = jogo.querySelector('.dashboard__item__button');
     let jogoNome = jogo.querySelector('.dashboard__item__name').innerHTML;
     
-    if (jogoBotao.innerHTML == 'Devolver') { //devolve o jogo
+    if (jogoImagem.classList.contains('dashboard__item__img--rented')) { //devolve o jogo
         let confirmacao = prompt(`Para confirmar a devolução, por favor digite: ${jogoNome}`);
 
         if (confirmacao != jogoNome) {
