@@ -1,6 +1,6 @@
 let contagemAlugados = 0;
 
-function alterarStatus(id) {
+function alterarStatus(event, id) {
     event.preventDefault();
 
     let jogo = document.getElementById(`game-${id}`);
@@ -8,7 +8,7 @@ function alterarStatus(id) {
     let jogoBotao = jogo.querySelector('.dashboard__item__button');
     let jogoNome = jogo.querySelector('.dashboard__item__name').innerHTML;
     
-    if (jogoBotao.innerHTML == 'Devolver') { //devolve o jogo
+    if (jogoImagem.classList.contains('dashboard__item__img--rented')) { //devolve o jogo
         let confirmacao = prompt(`Para confirmar a devolução, por favor digite: ${jogoNome}`);
 
         if (confirmacao != jogoNome) {
@@ -29,6 +29,10 @@ function alterarStatus(id) {
         
         alert(`${jogoNome} foi alugado com sucesso. Divirta-se`);
     }
-
     console.log(contagemAlugados);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    jogosAlugados = document.querySelectorAll('.dashboard__item__img--rented').length;
+    console.log(contagemAlugados);;
+});
