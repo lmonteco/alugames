@@ -1,6 +1,4 @@
-let contagemAlugados = 1;
-
-console.log(contagemAlugados);
+let contagemAlugados = 0;
 
 function alterarStatus(id) {
     event.preventDefault();
@@ -23,8 +21,6 @@ function alterarStatus(id) {
         jogoImagem.classList.toggle('dashboard__item__img--rented');
 
         alert(`${jogoNome} foi devolvido com sucesso. Aproveite para alugar outros!`);
-        console.log('Alugado menos 1');
-        
     } else { //aluga o jogo
         contagemAlugados++;
         jogoBotao.innerHTML = 'Devolver';
